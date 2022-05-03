@@ -1,0 +1,6 @@
+index.html   首页
+login.html   登录界面
+error-404.html 404界面
+base.html    基础栏框界面
+userinfo文件夹:1.用户信息查询界面  2.用户信息修改界面
+profile.html 展现用户信息

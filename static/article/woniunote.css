@@ -1,0 +1,46 @@
+body {
+    margin: 0px; /* 让浏览器窗口与元素之间无间隙 */
+    background-color: #eeeeee; /* 浏览器整体浅灰色背景 */
+    font-size: 18px; /* 字体大小 */
+    font-family: 微软雅黑, 幼圆, 宋体, Verdana; /* 字体名称 */
+}
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+/* 文章详情页面 */
+.article-detail {
+    border: solid 1px #cccccc;
+    padding: 30px 15px;
+    margin: 0px;
+}
+.article-detail .title {
+    font-size: 26px;
+    color: #e56244;
+}
+.article-detail .favorite {
+    text-align: right;
+    font-weight: bold;
+}
+.article-detail .info {
+    margin-top: 20px;
+    border-bottom: solid 1px #cccccc;
+    line-height: 60px;
+}
+.article-detail .content {
+    margin-top: 30px;
+}
+
+.article-nav {
+    border: solid 1px #cccccc;
+    margin-top: 20px;
+}
+.article-nav div {
+    height: 40px;
+    line-height: 40px;
+}

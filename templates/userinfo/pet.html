@@ -1,0 +1,586 @@
+{% extends 'base.html' %}  {# 将当前页面继承自base.html母版 #}
+{%  block content %}
+<script>
+    function push_feed_button_1(){
+        alert("喂食成功");
+        var feedmachine = document.getElementById("last_feed_1");
+        var mydate = new Date();
+        feedmachine.value = mydate.getFullYear()+"年"+mydate.getMonth()+"月"+mydate.getDay()+"日"+
+        mydate.getHours()+"时"+mydate.getMinutes()+"分";
+    }
+    function push_feed_button_2(){
+        alert("喂食成功");
+        var feedmachine = document.getElementById("last_feed_2");
+        var mydate = new Date();
+        feedmachine.value = mydate.getFullYear()+"年"+mydate.getMonth()+"月"+mydate.getDay()+"日"+
+        mydate.getHours()+"时"+mydate.getMinutes()+"分";
+    }
+    function push_feed_button_3(){
+        alert("喂食成功");
+        var feedmachine = document.getElementById("last_feed_3");
+        var mydate = new Date();
+        feedmachine.value = mydate.getFullYear()+"年"+mydate.getMonth()+"月"+mydate.getDay()+"日"+
+        mydate.getHours()+"时"+mydate.getMinutes()+"分";
+    }
+    function push_feed_button_4(){
+        alert("喂食成功");
+        var feedmachine = document.getElementById("last_feed_4");
+        var mydate = new Date();
+        feedmachine.value = mydate.getFullYear()+"年"+mydate.getMonth()+"月"+mydate.getDay()+"日"+
+        mydate.getHours()+"时"+mydate.getMinutes()+"分";
+    }
+    function push_feed_button_5(){
+        alert("喂食成功");
+        var feedmachine = document.getElementById("last_feed_5");
+        var mydate = new Date();
+        feedmachine.value = mydate.getFullYear()+"年"+mydate.getMonth()+"月"+mydate.getDay()+"日"+
+        mydate.getHours()+"时"+mydate.getMinutes()+"分";
+    }
+    function push_feed_button_6(){
+        alert("喂食成功");
+        var feedmachine = document.getElementById("last_feed_6");
+        var mydate = new Date();
+        feedmachine.value = mydate.getFullYear()+"年"+mydate.getMonth()+"月"+mydate.getDay()+"日"+
+        mydate.getHours()+"时"+mydate.getMinutes()+"分";
+    }
+
+     function  push_change_button(){
+            document.getElementById("light").style.display="block";document.getElementById("fade").style.display="block";
+        }
+
+    function push_changeButton_1() {
+        var pet_ID_str = document.getElementById("pet_id_1").value;
+        var pet_ID = document.getElementById("change_pet_id");
+        pet_ID.value = pet_ID_str;
+
+        //获取页面内容，并展示到弹出界面上
+        var pet_name_1 = document.getElementById("pet_1").value;
+        var change_name_1 = document.getElementById("change_pet_name");
+        change_name_1.value = pet_name_1;
+
+        var machineName = document.getElementById("feedMachine_1").value;
+        for (var i = 0; i < 8; i++) {
+            if (machineName == document.getElementById("feedMachines")[i].value) {
+                document.getElementById("feedMachines")[i].selected = true;
+                break;
+            }
+        }
+    }
+
+        function push_changeButton_2() {
+            var pet_ID_str = document.getElementById("pet_id_2").value;
+            var pet_ID = document.getElementById("change_pet_id");
+            pet_ID.value = pet_ID_str;
+
+            //获取页面内容，并展示到弹出界面上
+            var pet_name_2 = document.getElementById("pet_2").value;
+            var change_name_2 = document.getElementById("change_pet_name");
+            change_name_2.value = pet_name_2;
+
+            var machineName = document.getElementById("feedMachine_2").value;
+            for (var i = 0; i < 8; i++) {
+                if (machineName == document.getElementById("feedMachines")[i].value) {
+                    document.getElementById("feedMachines")[i].selected = true;
+                    break;
+                }
+
+            }
+        }
+
+        function push_changeButton_3() {
+            var pet_ID_str = document.getElementById("pet_id_3").value;
+            var pet_ID = document.getElementById("change_pet_id");
+            pet_ID.value = pet_ID_str;
+
+            //获取页面内容，并展示到弹出界面上
+            var pet_name_3 = document.getElementById("pet_3").value;
+            var change_name_3 = document.getElementById("change_pet_name");
+            change_name_3.value = pet_name_3;
+
+            var machineName = document.getElementById("feedMachine_3").value;
+            for (var i = 0; i < 8; i++) {
+                if (machineName == document.getElementById("feedMachines")[i].value) {
+                    document.getElementById("feedMachines")[i].selected = true;
+                    break;
+                }
+
+            }
+        }
+
+        function push_changeButton_4() {
+            var pet_ID_str = document.getElementById("pet_id_4").value;
+            var pet_ID = document.getElementById("change_pet_id");
+            pet_ID.value = pet_ID_str;
+
+            //获取页面内容，并展示到弹出界面上
+            var pet_name_4 = document.getElementById("pet_4").value;
+            var change_name_4 = document.getElementById("change_pet_name");
+            change_name_4.value = pet_name_4;
+
+            var machineName = document.getElementById("feedMachine_4").value;
+            for (var i = 0; i < 8; i++) {
+                if (machineName == document.getElementById("feedMachines")[i].value) {
+                    document.getElementById("feedMachines")[i].selected = true;
+                    break;
+                }
+
+            }
+        }
+
+          function push_changeButton_5() {
+            var pet_ID_str = document.getElementById("pet_id_5").value;
+            var pet_ID = document.getElementById("change_pet_id");
+            pet_ID.value = pet_ID_str;
+
+            //获取页面内容，并展示到弹出界面上
+            var pet_name_5 = document.getElementById("pet_5").value;
+            var change_name_5 = document.getElementById("change_pet_name");
+            change_name_5.value = pet_name_5;
+
+            var machineName = document.getElementById("feedMachine_5").value;
+            for (var i = 0; i < 8; i++) {
+                if (machineName == document.getElementById("feedMachines")[i].value) {
+                    document.getElementById("feedMachines")[i].selected = true;
+                    break;
+                }
+
+            }
+        }
+
+          function push_changeButton_6() {
+            var pet_ID_str = document.getElementById("pet_id_6").value;
+            var pet_ID = document.getElementById("change_pet_id");
+            pet_ID.value = pet_ID_str;
+
+            //获取页面内容，并展示到弹出界面上
+            var pet_name_6 = document.getElementById("pet_6").value;
+            var change_name_6 = document.getElementById("change_pet_name");
+            change_name_6.value = pet_name_6;
+
+            var machineName = document.getElementById("feedMachine_6").value;
+            for (var i = 0; i < 8; i++) {
+                if (machineName == document.getElementById("feedMachines")[i].value) {
+                    document.getElementById("feedMachines")[i].selected = true;
+                    break;
+                }
+
+            }
+        }
+
+        function change_pet_button(){
+        //获取宠物ID值
+        var pet_id = document.getElementById("change_pet_id").value;
+        if(pet_id == "001")
+        {
+            var pet_name = document.getElementById("change_pet_name").value;
+            var change_pet_name = document.getElementById("pet_1");
+            change_pet_name.value = pet_name;
+
+            var feed_machines = document.getElementById("feedMachines").value;
+            var feed_machine = document.getElementById("feedMachine_1");
+            feed_machine.value  = feed_machines;
+        }
+
+         if(pet_id == "002")
+        {
+            var pet_name = document.getElementById("change_pet_name").value;
+            var change_pet_name = document.getElementById("pet_2");
+            change_pet_name.value = pet_name;
+
+            var feed_machines = document.getElementById("feedMachines").value;
+            var feed_machine = document.getElementById("feedMachine_2");
+            feed_machine.value  = feed_machines;
+        }
+
+          if(pet_id == "003")
+        {
+            var pet_name = document.getElementById("change_pet_name").value;
+            var change_pet_name = document.getElementById("pet_3");
+            change_pet_name.value = pet_name;
+
+            var feed_machines = document.getElementById("feedMachines").value;
+            var feed_machine = document.getElementById("feedMachine_3");
+            feed_machine.value  = feed_machines;
+        }
+           if(pet_id == "004")
+        {
+            var pet_name = document.getElementById("change_pet_name").value;
+            var change_pet_name = document.getElementById("pet_4");
+            change_pet_name.value = pet_name;
+
+            var feed_machines = document.getElementById("feedMachines").value;
+            var feed_machine = document.getElementById("feedMachine_4");
+            feed_machine.value  = feed_machines;
+        }
+            if(pet_id == "005")
+        {
+            var pet_name = document.getElementById("change_pet_name").value;
+            var change_pet_name = document.getElementById("pet_5");
+            change_pet_name.value = pet_name;
+
+            var feed_machines = document.getElementById("feedMachines").value;
+            var feed_machine = document.getElementById("feedMachine_5");
+            feed_machine.value  = feed_machines;
+        }
+             if(pet_id == "006")
+        {
+            var pet_name = document.getElementById("change_pet_name").value;
+            var change_pet_name = document.getElementById("pet_6");
+            change_pet_name.value = pet_name;
+
+            var feed_machines = document.getElementById("feedMachines").value;
+            var feed_machine = document.getElementById("feedMachine_6");
+            feed_machine.value  = feed_machines;
+        }
+
+        }
+</script>
+
+<style>
+            body{
+            background: url("/img/bg.jpg");
+            }
+
+            .black_overlay{
+            display: none;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index:1001;
+            -moz-opacity: 0.8;
+            opacity:.80;
+            filter: alpha(opacity=88);
+        }
+        .white_content {
+            display: none;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 55%;
+            height: 55%;
+            padding: 20px;
+            border: 10px solid orange;
+            background-color: white;
+            z-index:1002;
+            overflow: auto;
+        }
+    </style>
+<div style="height: auto;overflow: scroll" >
+<div>
+    <center><h1><b>宠物喂食管理</b></h1></center>
+</div>
+<br>
+
+<div class="col-lg-2">
+    <div>
+        <div>
+            <img src="/img/pets/cat1.jpg">
+        </div>
+        <br>
+        <br>
+
+        <div class="form-group">
+            <label>宠 物  I D：</label>
+            <input id="pet_id_1" type="text" name="pet_id_1" disabled="disabled" value="001">
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label>宠物名称：</label>
+            <input id="pet_1" type="text" name="pet_name_1" disabled="disabled" value="咪咪">
+        </div>
+        <br>
+
+
+
+         <div class="form-group">
+            <label>喂食机器：</label>
+            <input id="feedMachine_1" type="text"  disabled="disabled" value="猫咪喂食器一号">
+        </div>
+
+        <br>
+        <div class="form-group">
+            <label>上次喂食：</label>
+            <input id="last_feed_1" type="text" name="last_feed_1" disabled="disabled" value="15:21">
+        </div>
+
+        <br>
+        <div>
+            <button onclick="push_feed_button_1()">投喂</button>
+            <button onclick="push_change_button(),push_changeButton_1()">编辑</button>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-2">
+    <div>
+        <div>
+            <img src="/img/pets/dog1.jpg">
+        </div>
+        <br>
+        <br>
+
+        <div class="form-group">
+            <label>宠 物  I D：</label>
+            <input id="pet_id_2" type="text" name="pet_id_2" disabled="disabled" value="002">
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label>宠物名称：</label>
+            <input id="pet_2" type="text" name="pet_name_1" disabled="disabled" value="汪汪">
+        </div>
+        <br>
+
+         <div class="form-group">
+            <label>喂食机器：</label>
+            <input id="feedMachine_2" type="text"  disabled="disabled" value="狗狗喂食器二号">
+        </div>
+
+        <br>
+        <div class="form-group">
+            <label>上次喂食：</label>
+            <input id="last_feed_2" type="text" name="last_feed_2" disabled="disabled" value="15:21">
+        </div>
+
+        <br>
+        <div>
+            <button onclick="push_feed_button_2()">投喂</button>
+            <button onclick="push_change_button(),push_changeButton_2()">编辑</button>
+        </div>
+
+    </div>
+</div>
+
+<div class="col-lg-2">
+    <div>
+        <div>
+            <img src="/img/pets/bird1.jpg">
+        </div>
+        <br>
+        <br>
+
+        <div class="form-group">
+            <label>宠 物  I D：</label>
+            <input id="pet_id_3" type="text" name="pet_id_3" disabled="disabled" value="003">
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label>宠物名称：</label>
+            <input id="pet_3" type="text" name="pet_name_3" disabled="disabled" value="july">
+        </div>
+        <br>
+
+         <div class="form-group">
+            <label>喂食机器：</label>
+            <input id="feedMachine_3" type="text"  disabled="disabled" value="小鸟喂食器三号">
+        </div>
+
+        <br>
+        <div class="form-group">
+            <label>上次喂食：</label>
+            <input id="last_feed_3" type="text" name="last_feed_2" disabled="disabled" value="15:21">
+        </div>
+
+        <br>
+        <div>
+            <button onclick="push_feed_button_3()">投喂</button>
+            <button onclick="push_change_button(),push_changeButton_3()">编辑</button>
+        </div>
+
+    </div>
+</div>
+
+<div class="col-lg-2">
+    <div>
+        <div>
+            <img src="/img/pets/fish1.jpg">
+        </div>
+        <br>
+        <br>
+
+        <div class="form-group">
+            <label>宠 物  I D：</label>
+            <input id="pet_id_4" type="text" name="pet_id_4" disabled="disabled" value="004">
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label>宠物名称：</label>
+            <input id="pet_4" type="text" name="pet_name_4" disabled="disabled" value="泡沫">
+        </div>
+        <br>
+
+         <div class="form-group">
+            <label>喂食机器：</label>
+            <input id="feedMachine_4" type="text"  disabled="disabled" value="小鱼喂食器二号">
+        </div>
+
+        <br>
+        <div class="form-group">
+            <label>上次喂食：</label>
+            <input id="last_feed_4" type="text" name="last_feed_4" disabled="disabled" value="15:21">
+        </div>
+
+        <br>
+        <div>
+            <button onclick="push_feed_button_4()">投喂</button>
+            <button onclick="push_change_button(),push_changeButton_4()">编辑</button>
+        </div>
+
+    </div>
+</div>
+
+<div class="col-lg-2">
+    <div>
+        <div>
+            <img src="/img/pets/rabbit1.jpg">
+        </div>
+        <br>
+        <br>
+
+        <div class="form-group">
+            <label>宠 物  I D：</label>
+            <input id="pet_id_5" type="text" name="pet_id_5" disabled="disabled" value="005">
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label>宠物名称：</label>
+            <input id="pet_5" type="text" name="pet_name_5" disabled="disabled" value="白雪">
+        </div>
+        <br>
+
+         <div class="form-group">
+            <label>喂食机器：</label>
+            <input id="feedMachine_5" type="text"  disabled="disabled" value="兔兔喂食器一号">
+        </div>
+
+        <br>
+        <div class="form-group">
+            <label>上次喂食：</label>
+            <input id="last_feed_5" type="text" name="last_feed_5" disabled="disabled" value="15:21">
+        </div>
+
+        <br>
+        <div>
+            <button onclick="push_feed_button_5()">投喂</button>
+            <button onclick="push_change_button(),push_changeButton_5()">编辑</button>
+        </div>
+
+    </div>
+</div>
+
+<div class="col-lg-2">
+    <div>
+        <div>
+            <img src="/img/pets/hamster1.jpg">
+        </div>
+        <br>
+        <br>
+
+        <div class="form-group">
+            <label>宠 物  I D：</label>
+            <input id="pet_id_6" type="text" name="pet_id_6" disabled="disabled" value="006">
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label>宠物名称：</label>
+            <input id="pet_6" type="text" name="pet_name_6" disabled="disabled" value="只只">
+        </div>
+        <br>
+
+         <div class="form-group">
+            <label>喂食机器：</label>
+            <input id="feedMachine_6" type="text"  disabled="disabled" value="仓鼠喂食器一号">
+        </div>
+
+        <br>
+        <div class="form-group">
+            <label>上次喂食：</label>
+            <input id="last_feed_6" type="text" name="last_feed_6" disabled="disabled" value="15:21">
+        </div>
+
+        <br>
+        <div>
+            <button onclick="push_feed_button_6()">投喂</button>
+            <button onclick="push_change_button(),push_changeButton_6()">编辑</button>
+        </div>
+
+    </div>
+</div>
+
+     <div id="light" class="white_content">
+
+            <br>
+
+          <div>
+                <label>宠 物 I D：</label>
+                <input id="change_pet_id" type="text" value="" disabled="disabled">
+            </div>
+            <br>
+
+            <div>
+                <label>宠物名称：</label>
+                <input id="change_pet_name" type="text" value="">
+            </div>
+            <br>
+
+            <div>
+                <label>定时喂食：</label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                </select>
+            </div>
+            <br>
+
+            <div>
+                <label>喂食机器：</label>
+                <select id="feedMachines" >
+                    <option>猫咪喂食器一号</option>
+                    <option>猫咪喂食器二号</option>
+                    <option>猫咪喂食器三号</option>
+                    <option>狗狗喂食器二号</option>
+                    <option>兔兔喂食器一号</option>
+                    <option>小鱼喂食器二号</option>
+                    <option>小鸟喂食器三号</option>
+                    <option>仓鼠喂食器一号</option>
+                </select>
+            </div>
+
+            <br>
+            <div><button name="close" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">返回界面</button>
+                <button onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none',change_pet_button()">完成修改</button>
+            </div>
+        </div>
+        <div id="fade" class="black_overlay"></div>
+</div>
+{% endblock %}

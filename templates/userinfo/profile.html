@@ -1,0 +1,66 @@
+{% extends 'base.html' %}  {# 将当前页面继承自base.html母版 #}
+{%  block content %}
+
+<div class="content">
+    <form>
+        <div class="panel panel-primary">
+<!--            <div class="panel-heading">-->
+<!--                <h3 class="panel-title">用户资料查看</h3>-->
+<!--            </div>-->
+            <div class="panel-body" style="text-align:center;">
+                <div class="form-horizontal">
+
+                    <div class="form-group col-md-offset-4">
+                        <label class="col-md-2 col-md-offset-3" style="text-align:right; font-size:18px;"></label>
+                        <div class="col-md-2">
+                            <img src='/img/profile/face-2.jpg' class="img-circle" alt="个人头像">
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-offset-4">
+                        <label class="col-md-2 col-md-offset-3" style="text-align:right; font-size:18px;">姓名</label>
+                        <div class="col-md-2">
+                            <div class="form-control col-md-2">
+                                {{ user.username }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-offset-4">
+                        <label class="col-md-2 col-md-offset-3" style="text-align:right; font-size:18px;">学号</label>
+                        <div class="col-md-2">
+                            <div class="form-control col-md-2">
+                                {{ user.id }}
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group col-md-offset-4">
+                        <label class="col-md-2 col-md-offset-3" style="text-align:right; font-size:18px;">寝室</label>
+                        <div class="col-md-2">
+                            <div class="form-control col-md-2">
+                                {{ user.roomid }}
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group col-md-offset-4">
+                        <label class="col-md-2 col-md-offset-3" style="text-align:right; font-size:18px;">绑定手机号</label>
+                        <div class="col-md-2">
+                            <div class="form-control col-md-2">
+                                {{ user.tel }}
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/updateinfo" class="btn btn-primary m-t">修改信息</a>
+                    <br>
+                    <a href="/deluser" class="btn btn-primary m-t">注销账号</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends 'base.html' %}  {# 将当前页面继承自base.html母版 #}
+{%  block content %}
+<link rel="stylesheet" href="index/style.css" media="screen" type="text/css" />
+<script src="/js/jqplot.js"></script>
+<iframe  style="width: 100%;  background-size: auto" scrolling="no" height="300" frameborder="0" allowtransparency="true" src="https://i.tianqi.com?c=code&id=55&color=%23000000&icon=1&site=12"></iframe>
+<div class="charts--container">
+  <ul>
+
+    <li class="chart">
+      <h3 class="chart--subHeadline">Chart 1</h3>
+      <h2 class="chart--headline">留在宿舍/外出 时间占比图</h2>
+      <div id="pieChart">
+        <svg id="pieChartSVG">
+          <defs>
+            <filter id='pieChartInsetShadow'>
+              <feOffset dx='0' dy='0'/>
+              <feGaussianBlur stdDeviation='3' result='offset-blur' />
+              <feComposite operator='out' in='SourceGraphic' in2='offset-blur' result='inverse' />
+              <feFlood flood-color='black' flood-opacity='1' result='color' />
+              <feComposite operator='in' in='color' in2='inverse' result='shadow' />
+              <feComposite operator='over' in='shadow' in2='SourceGraphic' />
+            </filter>
+            <filter id="pieChartDropShadow">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur" />
+              <feOffset in="blur" dx="0" dy="3" result="offsetBlur" />
+              <feMerge>
+                <feMergeNode />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+        </svg>
+      </div>
+    </li>
+	<li>
+
+	</li>
+    <li class="chart">
+      <h3 class="chart--subHeadline">Chart 2</h3>
+      <h2 class="chart--headline">今日24小时空气湿度变化</h2>
+      <div id="chart1" style="align-content: center; width: 100%"></div>
+    </li>
+
+    <li class="chart">
+      <h3 class="chart--subHeadline">Chart 3</h3>
+      <h2 class="chart--headline">今日24小时宿舍温度变化</h2>
+      <div id="chart2" style="align-content: center; width: 100%"></div>
+    </li>
+  </ul>
+</div>
+
+  <script src='index/d3.v3.min.js'></script>
+  <script src="index/index.js"></script>
+  <script type="text/javascript">
+
+	var data = [[78,65,83,70]];
+	var data_t = [[17,19,19,23]];
+	var data_max = 100; //Y轴最大刻度
+    var data_max_t = 35; //Y轴最大刻度
+	var line_title = ["空气湿度"]; //曲线名称
+    var line_title_t = ["宿舍温度"]; //曲线名称
+	var y_label = "空气湿度(%)"; //Y轴标题
+    var y_label_t = "宿舍温度(℃)"; //Y轴标题
+	var x_label = "今日时间"; //X轴标题
+	var x = ['0:00','4:00','8:00','12:00','16:00','20:00','24:00']; //定义X轴刻度值
+	var title = "这是标题"; //统计图标标题
+	// 最后一个参数(1是折线图;  2是柱形图)
+	j.jqplot.diagram.base("chart1", data, line_title, "", x, x_label, y_label, data_max, 1);
+	j.jqplot.diagram.base("chart2", data_t, line_title_t, "", x, x_label, y_label_t, data_max_t, 1);
+    </script>
+{% endblock %}

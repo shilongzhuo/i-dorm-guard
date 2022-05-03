@@ -1,0 +1,47 @@
+{% extends 'base.html' %}  {# 将当前页面继承自base.html母版 #}
+{%  block content %}
+                    <div class="ibox float-e-margins form1">
+                        <div class="ibox-content">
+                            <form class="form-horizontal" method="post">
+
+                                <div class="form-group col-md-offset-4">
+                                    <label class="col-md-2 col-md-offset-3" style="text-align:right; font-size:18px;"></label>
+                                    <div class="col-md-2">
+                                        <img src='/img/profile/face-2.jpg' class="img-circle" alt="个人头像">
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-lg-2 control-label">姓名</label>
+                                    <div class="col-lg-10"><input type="text" disabled="" placeholder="这里不能修改" value={{user.username}} class="form-control" ></div>
+                                </div>
+
+                                <div class="form-group"><label class="col-lg-2 control-label">学号</label>
+                                    <div class="col-lg-10"><input type="text" disabled="" placeholder="这里不能修改" value={{user.id}} class="form-control" ></div>
+                                </div>
+
+
+                                <div class="form-group"><label class="col-lg-2 control-label">寝室</label>
+                                    <div class="col-lg-10"><input type="text" placeholder="请输入寝室号" value={{user.roomid}} name="myupdateroomid" required="required" class="form-control"></div>
+                                </div>
+
+                                <div class="form-group"><label class="col-lg-2 control-label">TEL</label>
+                                    <div class="col-lg-10"><input type="text" placeholder="请输入联系方式" value={{user.tel}} name="myupdatetel" required="required" class="form-control"></div>
+                                </div>
+
+                                <div class="form-group"><label class="col-lg-2 control-label">密码</label>
+                                    <div class="col-lg-10"><input type="password" placeholder="请输入密码" value={{user.password}} name="myupdatepassword" required="required" class="form-control" ></div>
+                                </div>
+
+
+                                <div class="row div1">
+                                    <input type="submit" value="保存" class="btn btn-info " />
+
+                                    <button class="btn btn-default" style="color:black" href="/updateinfo">
+                                        刷新
+                                    </button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+{% endblock %}

@@ -1,0 +1,128 @@
+{% extends 'base.html' %}  {# 将当前页面继承自base.html母版 #}
+{%  block content %}
+<!--           <link href="/css/bootstrap.css">-->
+           <link href="/icon/font/css/open-iconic-bootstrap.css" rel="stylesheet">
+           <link href="/css/my_style.css" rel="stylesheet">
+           <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+           <script type="text/javascript" src="/js/PicCarousel.js"></script>
+
+           <!-- 轮播图组件应用，除了修改图片路径外，其它内容可不修改 -->
+               <div class="poster-main B_Demo" style="margin-top:10px; margin-bottom: 40px">
+                   <div class="poster-btn poster-prev-btn"></div>
+                   <ul class="poster-list">
+                       <li class="poster-item"><a href="http://sc.chinaz.com"><img src="/img/article/article_1.jpg" width="100%" ></a></li>
+                       <li class="poster-item"><a href="http://sc.chinaz.com"><img src="/img/article/article_2.jpg" width="100%" ></a></li>
+		               <li class="poster-item"><a href="http://sc.chinaz.com"><img src="/img/article/article_3.jpg" width="100%" ></a></li>
+		               <li class="poster-item"><a href="http://sc.chinaz.com"><img src="/img/article/article_4.jpg" width="100%" ></a></li>
+		               <li class="poster-item"><a href="http://sc.chinaz.com"><img src="/img/article/article_5.jpg" width="100%" ></a></li>
+		               <li class="poster-item"><a href="http://sc.chinaz.com"><img src="/img/article/article_6.jpg" width="100%" ></a></li>
+		               <li class="poster-item"><a href="http://sc.chinaz.com"><img src="/img/article/article_7.png" width="100%" ></a></li>
+                   </ul>
+                   <div class="poster-btn poster-next-btn"></div>
+               </div>
+
+
+
+
+
+            <!-- 展示文章列表 -->
+
+            <div class="col-12 row article-list">
+                <div class="col-sm-3 col-3 thumb d-none d-sm-block">
+                    <img src="/img/article/article_1.jpg"  class="img-fluid"/>
+                </div>
+                <div class="col-sm-9 col-xs-12 detail" >
+                    <div class="title" >
+                        <a href="/article">铁道校区停水通知</a></div>
+                    <div class="info">
+                        作者：后勤保障部&nbsp;&nbsp;&nbsp;
+                    日期：2021-05-11 15:18:42&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+                    <div class="intro">
+                        因设计院(原迎宾楼)接驳主水管，拟于2021年5月12日(星期三)23:00-13日(星期四) 6:00关闭相关供水管道阀门 ...
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 row article-list">
+                <div class="col-sm-3 col-3 thumb d-none d-sm-block">
+                    <img src="/img/article/article_4.jpg"  class="img-fluid"/>
+                </div>
+                <div class="col-sm-9 col-xs-12 detail" >
+                    <div class="title" >
+                        <a href="/article_1">温馨提示</a></div>
+                    <div class="info">
+                        作者：中南大学学生中心&nbsp;&nbsp;&nbsp;
+                        日期：2021-05-09 19:21:38&nbsp;&nbsp;&nbsp;
+                    </div>
+                    <div class="intro">
+                        关于热浴刷卡器扣费故障的处理建议: ...
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 row article-list">
+                <div class="col-sm-3 col-3 thumb d-none d-sm-block">
+                    <img src="/img/article/article_5.jpg"  class="img-fluid"/>
+                </div>
+                <div class="col-sm-9 col-xs-12 detail" >
+                    <div class="title" >
+                        <a href="/article_2">宿舍楼道清理通知</a></div>
+                    <div class="info">
+                        作者：铁道宿管站&nbsp;&nbsp;&nbsp;
+                        日期：2021-04-06 15:25:38&nbsp;&nbsp;&nbsp;
+                    </div>
+                    <div class="intro">
+                        学生宿舍楼道，走廊，楼梯出入口为消防通道，禁止堆放鞋架，鞋子，雨伞，电脑桌等任何杂物 ...
+                    </div>
+                </div>
+            </div>
+<style>
+    .article-list{
+        border: solid 1px #cccccc;
+        margin: 10px 0px;
+        background-color: whitesmoke;
+        padding: 15px 0px;
+    }
+    .article-list .thumb {
+    margin: 0px;
+    padding: 2px 10px 0 0;
+}
+.article-list .detail {
+    padding: 0px 10px;
+}
+.article-list .detail .title {
+    font-size: 22px;
+    color: #e56244;
+    margin-bottom: 10px;
+}
+.article-list .detail .info {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+.article-list .detail .intro {
+    font-size: 16px;
+    word-break: break-all;
+    word-wrap: break-word;
+    line-height: 25px;
+}
+</style>
+<!-- 自己写的javascript代码 -->
+<script>
+$(".A_Demo").PicCarousel("init");
+$(".B_Demo").PicCarousel({
+// "width":1000,
+"height":300,
+"posterWidth":520,
+"posterHeight":300,
+"scale":0.9,
+"speed":500,
+"autoPlay":true,
+"delay":1000,
+"verticalAlign":"top"
+});
+
+</script>
+{% endblock %}
